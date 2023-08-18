@@ -1,3 +1,4 @@
+#Importing the Dependencies
 import streamlit as st
 from dotenv import load_dotenv
 import pickle
@@ -23,7 +24,7 @@ with st.sidebar:
  
     ''')
     add_vertical_space(5)
-    st.write('Made with ❤️ by [Prompt Engineer](https://youtube.com/@engineerprompt)')
+    st.write('Made with ❤️ by Venu , a AI Enthusiast')
  
 load_dotenv()
  
@@ -64,8 +65,7 @@ def main():
             with open(f"{store_name}.pkl", "wb") as f:
                 pickle.dump(VectorStore, f)
  
-        # embeddings = OpenAIEmbeddings()
-        # VectorStore = FAISS.from_texts(chunks, embedding=embeddings)
+      
  
         # Accept user questions/query
         query = st.text_input("Ask questions about your PDF file:")
